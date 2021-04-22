@@ -25,7 +25,7 @@ def count_k(n,k):
         total=0
         i=1
         while i<=k:
-            total+=count_k(n-i,k)
+            total += count_k(n-i,k)
             i += 1
         return total
 
@@ -49,7 +49,7 @@ def max_product(s):
     """
     if not s:
         return 1
-    elif len(s)==1:
+    elif len(s) == 1:
         return s[0]
     else:
         return max(max_product(s[1:]),s[0]*max_product(s[2:]))
@@ -63,9 +63,9 @@ def check_hole_number(n):
     >>> check_hole_number(3245968)
     False
     """
-    if n // 10 == 0:
+    if n//10 == 0:
         return True
-    return ((n // 10) % 10) < (n % 10) and ((n // 10) % 10) < ((n // 100) % 10) and check_hole_number(n // 100) 
+    return ((n//10)%10) < (n%10) and ((n//10)%10) < ((n//100)%10) and check_hole_number(n//100) 
 
 def check_mountain_number(n):
     """
@@ -79,7 +79,7 @@ def check_mountain_number(n):
     True
     """
     def helper(x, is_increasing):
-        if x//10==0:
+        if x//10 == 0:
             return True
         if is_increasing and (x%10)<((x//10)%10):
             return helper(x//10,True)
