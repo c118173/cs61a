@@ -25,7 +25,7 @@ def count_k(n,k):
         total=0
         i=1
         while i<=k:
-            total+=count_k(n-i,k)
+            total += count_k(n-i,k)
             i += 1
         return total
 
@@ -63,9 +63,9 @@ def check_hole_number(n):
     >>> check_hole_number(3245968)
     False
     """
-    if n // 10 == 0:
+    if n//10 == 0:
         return True
-    return ((n // 10) % 10) < (n % 10) and ((n // 10) % 10) < ((n // 100) % 10) and check_hole_number(n // 100) 
+    return ((n//10)%10) < (n%10) and ((n//10)%10) < ((n//100)%10) and check_hole_number(n//100) 
 
 def check_mountain_number(n):
     """
