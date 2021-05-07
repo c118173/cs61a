@@ -142,3 +142,13 @@ class NoisyCat(Cat):
         """
         Cat.talk(self)
         Cat.talk(self)
+        
+    def __repr__(self):
+        """The interpreter-readable representation of a NoisyCat
+        >>> muffin = NoisyCat('Muffin', 'Catherine')
+        >>> repr(muffin)
+        "NoisyCat('Muffin', 'Catherine')"
+        >>> muffin
+        NoisyCat('Muffin', 'Catherine')
+        """
+        return "NoisyCat('" + str(self.name) +"', '" + str(self.owner) + "')"
